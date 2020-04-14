@@ -126,22 +126,26 @@ mkdir -p data/stack/logs
 - `../data` folders
 - `DATA_ORIGIN: EXAMPLE` -> will look for `EXAMPLE` folder in ../data/input/django_data/EXAMPLE
 
+- You can create the `EXAMPLE` folder in `/data/input/django_data/` and then place target data within to test.
+
 ```
 cd fragalysis-frontend/
 yarn
 ```
 
-Start webpack dev server
+Start webpack dev server:
 
 ```
 yarn start
 ```
 
-Start fragalysis stack
+Start the fragalysis stack within `/fragalysis-frontend`:
 
 ```
-docker-compose -f docker-compose.dev.yml up -d
+docker-compose -f docker-compose.dev.yml up
 ```
+
+*Optionally* use `docker-compose.localhost.yml up` and add a `-d` flag to start silently.
 
 `Please wait, it takes a minute until all containers are fully started.`
 
